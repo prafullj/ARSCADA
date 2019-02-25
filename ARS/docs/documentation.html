@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Documentation for ARSCADA components</title>
+</head>
+<body style="font-family" >
+<hr>
+<h2>General notes:</h2>
+<b>Colour is always specified as #rrggbb or 0Xrrggbb where rr,gg and bb are hexadecimal numbers from 00 to ff,</b><br>
+<b>giving intensity of red/blue/green components of colour e.g. 000000ff - for full blue, 000000 for black ffffff for white etc.</b><br>
+<b>Dimensions like Component height/width parameters always specified in pixels.</b><br>
+
+<h1>Documentation for Bar</h1>
+<img src="levelbar.png" ><br>
+
+<b>This component displays an analog value of a tag in a single bar graph.</b><br>
+<b>The value and its description are displayed at the bottom of the bar.</b><br>
+<b>The bar and the value text colour and blinking pattern depend upon the tag state and properties given below.</b><br>
+
+<b>ver="1"</b><i> -- (0 or 1) displays version number of component in debug window.</i><br>
+<b>fillcolour="0x0000FF"</b><i> -- fill colour of the bar</i><br>
+<b>emptycolour="0xFFFFFF"</b><i> -- empty colour of the bar</i><br>
+<b>barwidth="20"</b><i> -- barwidth in pixels</i><br>
+<b>barheight="100"</b><i> -- barheight in pixels</i><br>
+<b>bordercolour="0x000000"</b><i> -- colour of border line</i><br>
+<b>borderwidth="1"</b><i> - thickness of border line in pixels</i><br>
+<b>fcolour="0xFF0000"</b><i> -- colour of font for value display</i><br>
+<b>fnt="5"</b><i> -- font type 1 to 6 (Times New Roman, Arial, Calibri, Helvetica, Verdana, Century).</i><br>
+<b>fsiz="4"</b><i> -- font size 1 to 6 (10, 11, 12 14, 16, 18)</i><br>
+<b>bartag="@[default]Tag 0"</b><i> -- Fully qualified TagPath as defined in TagPath file prefixed with @)</i><br>
+<b>maxvalue="100"</b><i> -- max value represented by bar</i><br>
+<b>minvalue="0"</b><i> -- min value represented by bar</i><br>
+<b>units="bars"</b><i> -- units of data represented by bar</i><br>
+<b>description="Boiler Pressure"</b><i> -- description of value represented by bar</i><br>
+<b>decimals="2"</b><i> -- Number of decimals in value display(should be >=0)</i><br>
+<b>mult="1.0"</b><i> -- multiplication factor for value display (default 1)</i><br>
+<b>just="0"</b><i> -- Text justification for value display (0-left, 1-middle, 2-right)</i><br>
+<b>italic="0"</b><i> -- Text italic for value display (0 - No, 1- Yes)</i><br>
+<b>bold="0"</b><i> -- Text bold for value display (0 - No, 1- Yes)</i><br>
+<b>opacity="0.5"</b><i> -- Transparency of the component on screen (0.0 to 1.0)</i><br>
+<b>state0colour="0xFFFF00"</b><i> -- colour for state 0. Bar and value text will be filled with this colour in state 0 of the Tag</i><br> 
+<b>state1colour="0xFFA500"</b><i> -- colour for state 1. Bar and value text will be filled with this colour in state 1 of the Tag</i><br>
+.<br>
+.<br>
+<b>state9colour="0x0000FF"</b><i> -- colour for state 9. Bar and value text will be filled with this colour in state 9 of the Tag</i><br>
+<b>state0blink="0"</b><i> -- blink rate for state 0. (0 - no blink, 1 - slow blink (1 cps), 2 - fast blink(2 cps))</i><br>
+<b>state1blink="1"</b><i> -- blink rate for state 1. (0 - no blink, 1 - slow blink (1 cps), 2 - fast blink(2 cps))</i><br>
+.<br>
+.<br>
+<b>state9blink="2"</b><i> -- blink rate for state 9. (0 - no blink, 1 - slow blink (1 cps), 2 - fast blink(2 cps))</i><br>
+<br>
+<hr>
+<h1>Documentation for Meter</h1>
+<img src="meter.png" ><br>
+
+<b>This component displays the analog value of a tag in a dial or meter.</b><br>
+<b>The value and its description are displayed at the bottom of the meter.</b><br>
+<b>The needle and the value text colour and blinking pattern depend upon state of the tag state and properties given below.</b><br>
+
+<b>ver="1" </b><i>-- displays version number of component in debug window</i><br>	
+<b>fillcolour="#777777" </b><i>-- dial colour</i><br>
+<b>needlecolour="#FF0000" </b><i>-- colour of needle of meter</i><br>
+<b>radius="50" </b><i>-- radius in pixels of the dial</i><br>
+<b>bordercolour="0xffffff" </b><i>-- colour of the dial ticks</i><br>
+<b>borderwidth="2" </b><i>-- thickness in pixels of dial ticks</i><br>
+<b>fcolour="0x0000ff" </b><i>-- font colour of dial ticks</i><br>
+<b>fnt="2" </b><i>-- font type 1 to 6 (Times New Roman, Arial, Calibri, Helvetica, Verdana, Century)</i><br>
+<b>fsiz="1" </b><i>-- font size 1 to 6 (10, 11, 12 14, 16, 18) of dial ticks</i><br>
+<b>italic="0" </b><i>-- italic font style for dial ticks (0-no italic, 1-italic)</i><br>
+<b>bold="0" </b><i>-- bold font style for dial ticks (0-plain, 1-bold)</i><br>
+<b>just="1" </b><i>-- justification for font for dial ticks </i><br>
+<b>vfcolour="0xFF0000" </b><i>-- font colour for value display</i><br>
+<b>vfnt="5" </b><i>-- font type for value display</i><br>
+<b>vfsiz="2" </b><i>-- font size 1 to 6 (10, 11, 12 14, 16, 18) for value display</i><br>
+<b>vitalic="0" </b><i>-- italic font style for value display (0-plain, 1-italic)</i><br>
+<b>vbold="1" </b><i>-- bold font style for value display (0-plain, 1-bold)</i><br>
+<b>vjust="1" </b><i>-- text justification for value display (0-left, 1-center, 2-right)</i><br>
+<b>metertag="[default]Tag 0" </b><i>-- tag name (after last "/" in TagPath as given in TagPaths file, excluding @)</i><br>
+<b>maxvalue="100" </b><i>-- maximum value displayed in meter</i><br>
+<b>minvalue="0" </b><i>-- minumum value displayed in meter</i><br>
+<b>almin="15" </b><i>-- minimum alarm limit to be displayed in dial (optional)</i><br>
+<b>almax="85" </b><i>-- maximum limit to be displayed in dial</i><br>
+<b>units="kg/cm2" </b><i>-- units of tag value to be displayed</i><br>
+<b>description="Turbine Steam Pressure" </b><i>-- description of tag to be displayed.</i><br>
+<b>decimals="2" </b><i>-- decimals places to be displayed in value text (should be >=0)</i><br>
+<b>decimalscale="0" </b><i>-- decimal places to be displayed in the dial ticks (should be >=0))</i><br>
+<b>mult="1.0" </b><i>-- optional multiplication factor for display of tage value (default 1)</i><br>
+<b>opacity="0.5"</b><i> -- Transparency of the component on screen (0.0 to 1.0)</i><br>
+<b>divisions="5" </b><i>-- number of divisions to be displayed on the dial (can be 5 or 6 only)</i><br>
+<b>state0colour="0xFFFF00" </b><i>-- colour of needle and value text for tag state 0.</i><br>
+<b>state1colour="0xFFA500" </b><i>-- colour of needle and value text for tag state 1.</i><br>
+.<br>
+.<br>
+<b>state9colour="0x0000FF" </b><i>-- colour of needle and value text for tag state 9.</i><br>
+<b>state0blink="0" </b><i>-- blink rate for state 0 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+<b>state1blink="1" </b><i>-- blink rate for state 1 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+.<br>
+.<br>
+<b>state9blink="2" </b><i>-- blink rate for state 9 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+<hr>
+<h1>Documentation for Scale</h1>
+<img src="levelscale.png" ><br>
+
+
+<b>This component displays the analog value of a tag in a scale.</b><br>
+<b>The value and its description are displayed at the bottom of the scale.</b><br>
+<b>The colour and blinking pattern of the pointer and the value text depend upon state of the tag state and properties given below.</b><br>
+
+<b>ver="1" </b><i>-- displays version number of component in debug window</i><br>	
+<b>barwidth="40" </b><i>-- width of scale in pixels</i><br>
+<b>barheight="100" /</b><i>-- height of scale in pixels</i><br>
+<b>scalecolour="0xFFFFFF" </b><i>-- scale ticks colour</i><br>
+<b>scalethick="1" </b><i>-- thickness in pixels of scale ticks</i><br>
+<b>fcolour="0x0000ff" </b><i>-- font colour of scale ticks</i><br>
+<b>fnt="2" </b><i>-- font type 1 to 6 (Times New Roman, Arial, Calibri, Helvetica, Verdana, Century</i>)<br>
+<b>fsiz="1" </b><i>-- font size 1 to 6 (10, 11, 12 14, 16, 18) of scale ticks</i><br>
+<b>italic="0" </b><i>-- italic font style for scale ticks (0-no italic, 1-italic)</i><br>
+<b>bold="0" </b><i>-- bold font style for scale ticks (0-plain, 1-bold)</i><br>
+<b>just="1" </b><i>-- justification for font for scale ticks </i><br>
+<b>vfcolour="0xFF0000" </b><i>-- font colour for value display</i><br>
+<b>vfnt="5" </b><i>-- font type for value display 1 to 6 (Times New Roman, Arial, Calibri, Helvetica, Verdana, Century)</i><br>
+<b>vfsiz="2" </b><i>-- font size 1 to 6 (10, 11, 12 14, 16, 18) for value display</i><br>
+<b>vitalic="0" </b><i>-- italic font style for value display (0-plain, 1-italic)</i><br>
+<b>vbold="1" </b><i>-- bold font style for value display (0-plain, 1-bold)</i><br>
+<b>vjust="1" </b><i>-- text justification for value display (0-left, 1-center, 2-right)</i><br>
+<b>metertag="[default]Tag 0" </b><i>-- fully qualified TagPath as given in TagPaths file, excluding @)</i><br>
+<b>maxvalue="100" </b><i>-- maximum value displayed in scale</i><br>
+<b>minvalue="0" </b><i>-- minumum value displayed in scale</i><br>
+<b>almin="15" </b><i>-- minimum alarm limit to be displayed in scale (optional)</i><br>
+<b>almax="85" </b><i>-- maximum limit to be displayed in scale</i><br>
+<b>units="kg/cm2" </b><i>-- units of tag value to be displayed</i><br>
+<b>description="Turbine Steam Pressure" </b><i>-- description of tag to be displayed.</i><br>
+<b>decimals="2" </b><i>-- decimals places to be displayed in value text (should be >=0)</i><br>
+<b>decimalscale="0" </b><i>-- decimal places to be displayed in the dial ticks (should be >=0))</i><br>
+<b>mult="1.0" </b><i>-- optional multiplication factor for display of tage value (default 1)</i><br>
+<b>opacity="0.5"</b><i> -- Transparency of the component on screen (0.0 to 1.0)</i><br>
+<b>divisions="5" </b><i>-- number of divisions to be displayed on the dial (can be 5 or 6 only)</i><br>
+<b>state0colour="0xFFFF00" </b><i>-- colour of needle and value text for tag state 0.</i><br>
+<b>state1colour="0xFFA500" </b><i>-- colour of needle and value text for tag state 1.</i><br>
+.<br>
+.<br>
+<b>state9colour="0x0000FF" </b><i>-- colour of needle and value text for tag state 9.</i><br>
+<b>state0blink="0" </b><i>-- blink rate for state 0 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+<b>state1blink="1"</b><i>-- blink rate for state 1 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+.<br>
+.<br>
+<b>state9blink="2" </b><i>-- blink rate for state 9 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+<hr>
+<h1>Documentation for MultiStateInd</h1>
+<img src="multiStateInd.png"><br>
+<b>This component is multistate display indicator, showing various states of an equipment</b></br>
+<b>The state is displayed as a dynamic text in the button based on value of a binary,integer value of a Tag</b></br>
+<b>ver="1"</b><i>-- displays version number of component in debug window</i><br>
+<b>msitag="@[default]Tag 1" </b><i>-- fully qualified tag path as given in tag paths file</i><br> 
+<b>bordercolour="0x000000" </b><i>-- border colour for button.</i><br>
+<b>borderthickness="2" </b><i>-- border thickness for button</i><br>
+<b>cellbackgroundcolour="0xFFFF00" </b><i>-- background colour for cell. </i><br>
+<b>fcolour="0x0000ff" </b><i>-- font colour of text in the button</i><br>
+<b>fnt="2" </b><i>-- font type 1 to 6 (Times New Roman, Arial, Calibri, Helvetica, Verdana, Century) for text in the button</i><br>
+<b>fsiz="1" </b><i>-- font size 1 to 6 (10, 11, 12 14, 16, 18) of text in the button</i><br>
+<b>italic="0" </b><i>-- italic font style for text in the button (0-no italic, 1-italic)</i><br>
+<b>bold="0" </b><i>-- bold font style for text in the button (0-plain, 1-bold)</i><br>
+<b>just="1" </b><i>-- justification for font for text in the button </i><br>
+<b>opacity="0.5"</b><i> -- Transparency of the component on screen (0.0 to 1.0)</i><br>
+<b>state0colour="0xFFFF00" </b><i>-- button fill colour for tag state 0.</i><br>
+<b>state1colour="0xFFA500" </b><i>-- button fill colour for tag state 1.</i><br>
+.<br>
+.<br>
+<b>state0="OFF"</b><i> -- button label for tag state 0. Tag states are defined in tag-paths input file</i><br>
+<b>state1="ON" </b><i> -- button label for tag state 1. Tag states are defined in tag-paths input file</i><br>
+<b>state2="TRIP"</b><i> -- button label for tag state 1. Tag states are defined in tag-paths input file</i><br>
+.<br>
+.<br>
+<b>state9="state9" </b><i> -- button label for tag state 9. Tag states are defined in tag-paths input file</i><br>
+<b>state0blink="0" </b><i>-- button blink rate for state 0 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+<b>state1blink="1" </b><i>-- button blink rate for state 1 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+.<br>
+.<br>
+<b>state9blink="2" </b><i>-- button blink rate for state 9 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+<hr>
+<h1>Documentation for StaticText</h1>
+<img src="staticText.png"><br>
+<b>This component displays a single line of static text on the screen for labeling/annotating the image.</b></br>
+<b>ver="1"</b><i> -- displays version number of component in debug window</i><br>	
+<b>cellvar="This is static text" </b><i> -- the static string to be displayed</i><br>
+<b>fnt="5" </b><i> -- font type 1 to 6 (Times New Roman, Arial, Calibri, Helvetica, Verdana, Century) for the static text</i><br>
+<b>fsiz="4" </b><i> -- font size 1 to 6 (10, 11, 12 14, 16, 18) for static text.</i><br>
+<b>fbold="0" </b><i> -- font bold style for static text(0-plain, 1-bold)</i><br>
+<b>fjust="1" </b><i> -- font justification for static text(0-plain, 1-italic)</i><br> 
+<b>border="1" </b><i> -- whether to display the text in a surrounding box (1-with box, 0-without box).</i><br>
+<b>cellalpha="1" </b><i> -- alpha (number between 0.0 to 1.0) of cell opacity (1.0=opaque, 0.0-transparent)</i><br>
+<b>borderthickness="1" </b><i> -- thickness of surrounding box in pixels, if provided.</i><br>
+<b>bordercolour="0x0000FF" </b><i> -- colour of the border of surrounding box, if provided</i><br>
+<b>cellbackgroundcolour="0xffff00" </b><i> -- background colour of the surrounding box, if provided</i><br>
+
+<hr>
+<h1>Documentation for Cell</h1>
+<img src="textLabelCell.png"><br>
+<b>This component displays a dynamic value of a tag with its description and units in a cell.</b></br>
+<b>ver="0"</b><i>-- (0,1) to displays version number of component in debug window</i><br>
+<b>celltag="@[default]Tag 1"</b><i> -- fully qualified tag path of the tag driving this display</i><br>
+<i> -- cell width is automatically calculated based on cellvar attribute, give leading/trailing blanks to adjust cell width</i><br>
+<b>decimals="2"</b><i> -- number of deicmal places in value display (should be >=0)</i><br>
+<b>stateind="0"</b><i> -- 0-don't display state of the Tag, 1-display state with state colour and blink rate</i><br>
+<b>mult="1.0"</b><i> -- multiplication factor for value display (default 1)</i><br>			
+<b>bordercolour="0x000000"</b><i> -- colour of the border line of the cell</i><br>
+<b>borderthickness="2"</b><i> -- thickness of the border in pixels of the cell</i><br>
+<b>cellbackgroundcolour="0xFFFF00"</b><i> -- default fill colour of the cell</i><br>
+<b>fcolour="0xFF0000"</b><i> -- font colour of the text to be displayed in cell</i><br>
+<b>fnt="5"</b><i> -- font type 1 to 6 (Times New Roman, Arial, Calibri, Helvetica, Verdana, Century) for text in cell</i><br>
+<b>fsiz="4"</b><i> -- font size 1 to 6 (10, 11, 12 14, 16, 18) for the cell text.</i><br>
+<b>fbold="0"</b><i> -- font style (0-normal, 1- bold) for cell text.</i><br>
+<b>fitalic="0"</b><i> -- font style (0-normal, 1- italic) cell text.</i><br>
+<b>fjust="1"</b><i> -- font justification (0-left, 1 - middle, 2 - right) for cell text</i><br>
+<b>units="Kg"</b><i> -- units for the value displayed in cell (will be appended with value with once space) </i><br>
+<b>description=""</b><i> -- description for cell value (will be prefixed with the value plus one space).</i><br>
+<b>state0colour="0xFFFF00"</b><i> -- cell fill colour for tag state 0.</i><br>
+<b>state1colour="0xFFA500"</b><i> -- cell fill colour for tag state 1.</i><br>
+.<br>
+.<br>
+<b>state9colour="0x0000FF"</b><i> -- cell fill colour for tag state 9.</i><br>
+<b>state0blink="0"</b><i> -- cell blink rate for state 0 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+<b>state1blink="1"</b><i> -- cell blink rate for state 1 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+.<br>
+.<br>
+<b>state9blink="2"</b><i> -- cell blink rate for state 9 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+.<br>
+<b>state0="state0"</b><i> -- string to be displayed for state 0 of the tag. (e.g. ON/OFF/TRIP..etc.)</i><br>
+<b>state1="state1"</b><i> -- string to be displayed for state 0 of the tag. (e.g. ON/OFF/TRIP..etc.)</i><br>
+.<br>
+<b>state9="state9"</b><i> -- string to be displayed for state 0 of the tag. (e.g. ON/OFF/TRIP..etc.)</i><br>
+
+<hr>
+<h1>Documentation for Row</h1>
+<img src="textLabelRow.png" ><br>
+<b>This component displays the static/dynamic values of a tag in single row of table with .</b></br>
+<b>ver="1"</b><i> -- displays version number of component in debug window</i><br>
+<b>colword="1,1,0,0x000000:0:2,1,1,0x000000:0"</b><i> -- format of each column (group of 4 numbers seperated by ',') seperated by ":" for each column as follows:</i><br>	
+<i> -- the four numbers are justification(0-left,1-center,2-right), bold(0 or 1), italic(0 or 1), colour(0xFFFFFF) for text in each column</i><br>	
+<i> -- the trailing numbers in group of four are optional, default values will be taken.(e.g. if colour is not specified default (black) will be used for font)</i><br>
+<b>rowvar="[default]Tag 102"</b><i>-- fully qualified tag path of the tag driving this display</i><br>
+<b>bordercolour="0x000000" </b><i> -- broder colour fo the cells in the row </i><br>
+<b>borderthickness="2"</b><i> -- broder thickness in pixels for the cells in the row </i><br>
+<b>fcolour="0x000000"</b><i> -- default font colour for the cells in the row </i><br>
+<b>fnt="2"</b><i> -- font type 1 to 6 (Times New Roman, Arial, Calibri, Helvetica, Verdana, Century) for text in each cell</i><br>
+<b>fsiz="4"</b><i> -- font size 1 to 6 (10, 11, 12 14, 16, 18) for each cell.</i><br>
+<b>opacity="0.5"</b><i> -- Transparency of the component on screen (0.0 to 1.0)</i><br>
+<b>cellbackgroundcolour="0xFFFF00"</b><i> -- default background colour of each cell</i><br>
+<b>state0colour="0xFFFF00"</b><i> -- background colour of cell for state 0 of a tag</i><br>
+<b>state1colour="0xFFA500"</b><i> -- background colour of cell for state 1 of a tag</i><br>
+.<br>
+<b>state9colour="0x0000FF"</b><i> -- background colour of cell for state 9 of a tag</i><br>
+
+<b>state0blink="0"</b><i> -- cell blink rate for state 0 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+<b>state1blink="1"</b><i> -- cell blink rate for state 0 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+.<br>
+<b>state9blink="2"</b><i> -- cell blink rate for state 0 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+.<br>
+<b>state0="state0"</b><i> -- string to be displayed for state 0 of the tag. (e.g. ON/OFF/TRIP..etc.)</i><br>
+<b>state1="state1"</b><i> -- string to be displayed for state 1 of the tag. (e.g. ON/OFF/TRIP..etc.)</i><br>
+.<br>
+<b>state9="state9"</b><i> -- string to be displayed for state 9 of the tag. (e.g. ON/OFF/TRIP..etc.)</i><br>
+
+<hr>
+<h1>Documentation for Table</h1>
+<img src="textLabelTable.png" ><br>
+<b>This component displays the dynamic values and key properties of gven tags in a table</b></br>
+<b>This is useful for displaying a group of related parameters/properties of an equipment on the screen.</b></br>
+<b>ver="1"</b><i> -- displays version number of the component in debug window</i><br>
+<b>rows="4"</b><i> -- number of rows in the table</i><br>
+<b>columns="4"</b><i> -- number of columns in the table</i><br>
+<b>colword="1,1,0,0x000000:0:2,1,1,0x000000:0"</b><i> -- format of each column (group of 4 numbers seperated by ',') seperated by ":" for each column as follows:</i><br>	
+<i> -- the four numbers are text justification(0-left,1-center,2-right), bold(0 or 1), italic(0 or 1), colour(0xFFFFFF) for text in each column</i><br>	
+<i> -- the trailing numbers in group of four are optional, default values will be taken for not specified data</i><br>
+<b>tabletags="[default]Tag 0;[default]Tag 1;[default]Tag 3</b>
+<i> -- specify the Tag names/text to be displayed in each column in the row separated by ";"</i><br>
+<i> -- in a single string. The dynamic tag values and the static key properties are displayed in each row of the table</i><br>
+<b>bordercolour="0x000000" </b><i> -- broder colour for the table </i><br>
+<b>borderthickness="2"</b><i> -- broder thickness in pixels for the table </i><br>
+<b>xstart="10"</b><i> -- xoffset in pixels for the table from top left corner of plugin.</i><br>
+<b>ystart="10"</b><i> -- yoffset in pixels for the table from top left corner of plugin.</i><br>
+<b>fcolour="0x000000"</b><i> -- default font colour for the cells in the table </i><br>
+<b>fnt="2"</b><i> -- font type 1 to 6 (Times New Roman, Arial, Calibri, Helvetica, Verdana, Century) for text in each cell</i><br>
+<b>fsiz="4"</b><i> -- font size 1 to 6 (10, 11, 12 14, 16, 18) for each cell.</i><br>
+<b>headercolour="0x0000ff </b><i> -- first row of the table is header of the table and is displayed in different colour</i><br>
+<b>cellbackgroundcolour="0xFFFF00"</b><i> -- default background colour of each cell</i><br>
+<b>pluginbordercolour="0x000000"</b><i> -- border colour for the pluginbox surrounding the table with a margin of xstart,ystart</i><br>
+<b>pluginfillcolour="0x0000FF"</b><i> -- fill colour of the above plugin box. (an alpha on .25 is automatically applied to this colour)</i><br>
+<b>opacity="0.5"</b><i> -- Transparency of the component on screen (0.0 to 1.0)</i><br>
+<b>state0colour="0xFFFF00"</b><i> -- background colour of cell for state 0 of a tag</i><br>
+<b>state1colour="0xFFA500"</b><i> -- background colour of cell for state 1 of a tag</i><br>
+.<br>
+<b>state9colour="0x0000FF"</b><i> -- background colour of cell for state 9 of a tag</i><br>
+
+<b>state0blink="0"</b><i> -- cell blink rate for state 0 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+<b>state1blink="1"</b><i> -- cell blink rate for state 0 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+.<br>
+<b>state9blink="2"</b><i> -- cell blink rate for state 0 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+.<br>
+<b>state0="state0"</b><i> -- string to be displayed for state 0 of the tag. (e.g. ON/OFF/TRIP..etc.)</i><br>
+<b>state1="state1"</b><i> -- string to be displayed for state 1 of the tag. (e.g. ON/OFF/TRIP..etc.)</i><br>
+.<br>
+<b>state9="state9"</b><i> -- string to be displayed for state 9 of the tag. (e.g. ON/OFF/TRIP..etc.)</i><br>
+
+<hr>
+<h1>Documentation for TableMulti</h1>
+<img src="textLabelTableMulti.png" ><br>
+<b>This component is like above table component but for a multiple pages in the table.</b></br>
+<b>ver="1"</b><i> -- displays version number of the component in debug window</i><br>
+<b>rows="4"</b><i> -- number of rows in the table</i><br>
+<b>ttitle="Main Plant Parameters:1:1:1"</b><i> -- Table title followed by text justification (0-left,1-center,2-right),bold(0,1), italic(0,1) seperated by ":"</i>
+<b>colword="1,1,0,0x000000:0:2,1,1,0x000000:0"</b><i> -- format of each column (group of 4 numbers seperated by ',') seperated by ":" for each column as follows:</i><br>	
+<i> -- the four numbers are text justification(0-left,1-center,2-right), bold(0 or 1), italic(0 or 1), colour(0xFFFFFF) for text in each column</i><br>	
+<i> -- the trailing numbers in group of four are optional, default values will be taken for not specified data</i><br>
+<b>mttags="[default]Tag 0;[default]Tag 1;[default]Tag 2;[default]Tag 3;[default]Tag 4;[default]Tag 5;></b>
+<i> -- specify the Tag names of tags values to be displayed in each column in the row separated by ";"</i><br>
+<b>bordercolour="0x000000" </b><i> -- broder colour for the table </i><br>
+<b>borderthickness="2"</b><i> -- broder thickness in pixels for the table </i><br>
+<b>xstart="10"</b><i> -- xoffset in pixels for the table from top left corner of plugin.</i><br>
+<b>ystart="10"</b><i> -- yoffset in pixels for the table from top left corner of plugin.</i><br>
+<b>fcolour="0x000000"</b><i> -- default font colour for the cells in the table </i><br>
+<b>fnt="2"</b><i> -- font type 1 to 6 (Times New Roman, Arial, Calibri, Helvetica, Verdana, Century) for text in each cell</i><br>
+<b>fsiz="4"</b><i> -- font size 1 to 6 (10, 11, 12 14, 16, 18) for each cell.</i><br>
+<b>opacity="0.5"</b><i> -- Transparency of the component on screen (0.0 to 1.0)</i><br>
+<b>headercolour="0x0000ff </b><i> -- first row of the table is header of the table and is displayed in different colour</i><br>
+<b>cellbackgroundcolour="0xFFFF00"</b><i> -- default background colour of each cell</i><br>
+<b>pluginbordercolour="0x000000"</b><i> -- border colour for the pluginbox surrounding the table with a margin of xstart,ystart</i><br>
+<b>pluginfillcolour="0x0000FF"</b><i> -- fill colour of the above plugin box. (an alpha on .25 is automatically applied to this colour)</i><br>
+<b>state0colour="0xFFFF00"</b><i> -- background colour of cell for state 0 of a tag</i><br>
+<b>state1colour="0xFFA500"</b><i> -- background colour of cell for state 1 of a tag</i><br>
+.<br>
+<b>state9colour="0x0000FF"</b><i> -- background colour of cell for state 9 of a tag</i><br>
+
+<b>state0blink="0"</b><i> -- cell blink rate for state 0 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+<b>state1blink="1"</b><i> -- cell blink rate for state 0 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+.<br>
+<b>state9blink="2"</b><i> -- cell blink rate for state 0 of tag (0-no blink, 1-slow blink(1 cps), 2- fast blink (2 cps))</i><br>
+.<br>
+<b>state0="state0"</b><i> -- string to be displayed for state 0 of the tag. (e.g. ON/OFF/TRIP..etc.)</i><br>
+<b>state1="state1"</b><i> -- string to be displayed for state 1 of the tag. (e.g. ON/OFF/TRIP..etc.)</i><br>
+.<br>
+<b>state9="state9"</b><i> -- string to be displayed for state 9 of the tag. (e.g. ON/OFF/TRIP..etc.)</i><br>
+<hr>
+<h1>Documentation for cursorPosition</h1>
+<img src="curpos.png" ><br>
+
+<b>This component is added as a plugin at topleft corner of the screen, one per scene, for showing cursor coordinates on the panoramic image.</b><br>
+<b>Clicking on this will enable/disable the cross hair cursor on the image.</b><br>
+<b>The last clicked position is remembered on screen and current position is dsiplayed dynamically.</b><br>
+<b>The x, y coordinates in pixels as well as v and h angular coordinates are displayed.</b><br>
+<b>These coordinates are to be noted down and used in placement of various components on the images.</b><br>
+       
+<b>name="curpos"</b><i> -- unique name of the plugin, one per image.</i><br>
+<b>align="lefttop"</b><i> -- align at topleft corner of the screen</i><br>
+<b>ver="1"</b><i> -- displays the version number of plugin in the debug windo</i><br>
+<b>keep="true"</b><i> -- keeps the component displayed in case of multi scene pano.</i><br>
+<b>cellbackgroundcolour="0x007777"</b><i> -- background colour of the cell</i><br>
+<b>fcolour="0x0000FF"</b><i> -- font colour of the coordinates displayed</i><br>
+<b>fnt="5"</b><i> -- font type 1 to 6 (Times New Roman, Arial, Calibri, Helvetica, Verdana, Century).</i><br>
+<b>fsiz="4"</b><i> -- font size 1 to 6 (10, 11, 12 14, 16, 18)</i><br>
+<b>fbold="0"</b><i> -- font bold(=1) or normal(=0)</i><br>
+<b>fitalic="0"</b><i> -- font italic (=1) or normal(=0)</i><br>
+<b>fjust="1"</b><i> -- font justification (0=left,1=middle,2=right)"</i><br>
+.<br>
+.<br>
+<hr>
+
+<h1>Documentation for statusWindow</h1>
+<img src="statuswindow.png" ><br>
+
+<b>This component is used as a plugin at topright corner of the screen, one per scene, for showing status of ARSCADA application.</b><br>
+<b>The status displays following:
+<b><li><i>Username, </i></li>
+<b><li><i>Access rights, </i></li>
+<b><li><i>Online/Offline status,</i></li> 
+<b><li><i>Debug flag, </i></li>
+<b><li><i>Cycle time of update,</i></li> 
+<b><li><i>License state, </i></li>
+<b><li><i>Time of the day, </i></li>
+<b><li><i>Connection status with Ignition.</i></b><br>
+<b>The configurable parameters as as follows.</b><br>     	         
+<b>name="StatusWindow1"</b><i> -- unique name of the plugin, one per image.</i><br>
+<b>align="righttop"</b><i> -- align at topright corner of the screen</i><br>
+<b>ver="1"</b><i> -- displays the version number of plugin in the debug window</i><br>
+<b>zorder="1"</b><i> -- order of display in case of overlapping symbols</i><br>
+<b>keep="true"</b><i> -- keeps the component displayed in case of multi scene pano.</i><br>
+<b>opacity="0.5"</b><i> -- opacity of the plugin.</i><br>
+.<br>
+.<br>
+<hr>
+<h1>Documentation for acknowledge component</h1>
+<img src="ackn.png" ><br>
+
+<b>This component is used as a plugin at bottomright corner of the screen, one per scene for alarm acknowledgement.</b><br>
+<b>Clicking on this button toggles the blinking of the alarm cells.</b><br>
+<b>The configurable parameters as as follows.</b><br>
+                                   
+<b>name="ack1"</b><i> -- unique name of the plugin, one per image.</i><br>
+<b>align="rightbottom"</b><i> -- align at topright corner of the screen</i><br>
+<b>ver="1"</b><i> -- displays the version number of plugin in the debug window</i><br>
+<b>cellvar="ACK"</b><i> -- Text to be displayed in the button</i><br>
+<b>keep="true"</b><i> -- keeps the component displayed in case of multi scene pano.</i><br>
+<b>fnt="5"</b><i> -- font type 1 to 6 (Times New Roman, Arial, Calibri, Helvetica, Verdana, Century).</i><br>
+<b>fsiz="4"</b><i> -- font size 1 to 6 (10, 11, 12 14, 16, 18)</i><br>
+<b>fbold="0"</b><i> -- font bold(=1) or normal(=0)</i><br>
+<b>fitalic="0"</b><i> -- font italic (=1) or normal(=0)</i><br>
+<b>fjust="1"</b><i> -- font justification (0=left,1=middle,2=right)"</i><br>
+<b>fcolour="0x0000FF"</b><i> -- font colour of the text</i><br>
+<b>opacity="0.5"</b><i> -- Transparency of the component on screen (0.0 to 1.0)</i><br>
+<b>borderthickness="1"</b><i> -- thinkness of the surrounding box</i><br>
+<b>bordercolour="0x0000FF"</b><i> -- colour of the surrounding box"</i><br>
+<b>cellbackgroundcolour="0xffff00"</b><i> -- background colour of the cell</i><br>
+
+.<br>
+.<br>
+<hr>
+<hr>
+<h1>Documentation for Alarm Summary component</h1>
+
+<b> This component is like multi page table showing list of active alarms (max 20 per page max 5 pages)</b><br>
+<b> It is to be used as a plugin fixed at lefttop corner of the screen</b><br>
+<b> Clicking on this components toggles mimimization status of alarm window.</b><br>
+<b> In minimized state it shows total number of active alarms.</b><br>
+<b> Clicking on a row of alarm takes you to the scene with the relevant component at the ceter</b><br>
+<b> The configurable parameters as as follows.</b><br>
+<br>
+										
+<b>name="alarm1"</b><i> -- unique name of the plugin, one per image.</i><br>
+<b>ver="1"</b><i> -- displays the version number of plugin in the debug window</i><br>
+<b>xstart="50"</b><i> -- the x offset from lefttop for the component.</i><br>
+<b>ystart="50" </b><i> -- the y offset from lefttop for the component.</i><br>
+<b>fnt="5"</b><i> -- font type 1 to 6 (Times New Roman, Arial, Calibri, Helvetica, Verdana, Century).</i><br>
+<b>fsiz="4"</b><i> -- font size 1 to 6 (10, 11, 12 14, 16, 18)</i><br>
+<b>fbold="0"</b><i> -- font bold(=1) or normal(=0)</i><br>
+<b>fitalic="0"</b><i> -- font italic (=1) or normal(=0)</i><br>
+<b>fjust="1"</b><i> -- font justification (0=left,1=middle,2=right)"</i><br>
+<b>fcolour="0x0000FF"</b><i> -- font colour of the text</i><br>
+<b>opacity="0.5"</b><i> -- Transparency of the component on screen (0.0 to 1.0)</i><br>
+<b>borderthickness="1"</b><i> -- thinkness of the surrounding box</i><br>
+<b>bordercolour="0x0000FF"</b><i> -- colour of the surrounding box"</i><br>
+<b>cellbackgroundcolour="0xffff00"</b><i> -- background colour of the cell</i><br>
+
+<hr>
+</body>
+</html>
