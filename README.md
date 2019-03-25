@@ -19,9 +19,9 @@ Installation manual for AR-SCADA
 ·Ensure your ignition is running on the server (in case it’s a trial version ensure to start trial period)?
 
 ·In latest version of HTML5 browser (preferably chrome, as AR-SCADA was developed and tested on chrome)  open link
-http://<hostname>:8088/main/system/webdev/new/ARS/systemlist.html
+http://\<hostname\>:8088/main/system/webdev/new/ARS/systemlist.html
   
-·replace <hostname> with your ignition’s host name (to get host name open command prompt on the Ignition server and type hostname on the command prompt and press enter, it will display the hostname, copy and paste it where ever required.
+·replace \<hostname\> with your ignition’s host name (to get host name open command prompt on the Ignition server and type hostname on the command prompt and press enter, it will display the hostname, copy and paste it where ever required.
   
 For example http://pramanj:8088/main/system/webdev/new/ARS/systemlist.html
 The demo should word now. It will stop updating values after 60 seconds then you can refresh or change page to continue.
