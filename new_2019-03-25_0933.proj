@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+<version>
+  <major>7</major>
+  <minor>9</minor>
+  <rev>10</rev>
+  <build>2018112821</build>
+</version>
+<timestamp>2019-03-25 09:34:04</timestamp>
+<id>6</id>
+<name>new</name>
+<source></source>
+<title></title>
+<description></description>
+<enabled>true</enabled>
+<lastModified>1553486383903</lastModified>
+<lastModifiedBy>admin</lastModifiedBy>
+<editCount>9</editCount>
+<uuid>e5d35a0a-56cc-9ab4-94bd-6e500a6a5c2b</uuid>
+<resources>
+	<resource id='51' name='' module='fpmi' modver='' type='client_tags' ver='0' dirty='false' editcount='1' parent='' oemlocked='false' scope='4' protected='false'>
+		<doc></doc>
+		<bytes><![CDATA[H4sIAAAAAAAAAG1QwUoDMRCdWGu3rbV6E/Gw4MlL2CwU2+KtsKigHize0zQt0c1m3aQt4jeIN/Eb
+vAj+hf6GH+HVCfHgwUCY4THvzXvzcvj0Ovo+u3x//Dw+eX77AIA1AKIOrr8e4P+3jX8ToGGlu+Ba
+BsbOER1QltA0YX3G0n7KEG+hkgikhpncSOEstjWkz0qt6FJWVpkCoQ2A/XNTxJmcxGkvZmzY6w9Z
+Ep9ejWNUHOBIhESRe34bVTXWdQQHYWviNyBssG7hoHUVdh1EPIGgvVmFVlemuv2ztYsalTEO2yZA
+JoymqpguhFNLyRfOaO5wkM64cKa69455WeZKBNje5Y7PLR3lShZuzOeZyafS762jnlNaWsd1uQsh
+MpAoXApqUTAP9ShEB+KHGsSnbAYzQPZCJGh5SjsKN4dOi4SIQOLfxit1fwDqtpu1xwEAAA==]]></bytes></resource>
+	<resource id='53' name='ARS' module='com.inductiveautomation.webdev' modver='' type='webdev-resource' ver='0' dirty='false' editcount='6' parent='ebc4e4d9-2545-4732-adc3-30894c7bb9e6' oemlocked='false' scope='1' protected='false'>
+		<doc></doc>
+		<bytes><![CDATA[H4sIAAAAAAAAAL1SwW7TQBAdJ6R127QlLW3TFCEjceGQVRxU0USVEERCBakqIhy5bJ11usX2Wut1
+UD8CcUN8Axck/gJ+iCtvvUGkojckLNkz+3bezLwZf3748cvo58uzbx9+HJ98+vqdiGpEnnxwf/ce
+3fzcxbvn3BWiJ5FKmcwmZWTkTPDSqJQbqTImp5msHASklcliOWXPeCGjV1rlQpursTAu0bI6vxSR
+KeDWiZpxnko2E7oAH9ABCqaqzIyYdGOVTITualGoUkcCt+tErUs+46w0MmEnvLg45TnwNtHSaPj2
+6esxDreROC9ttRbkncE2wfxDc5QtouN/0YMUu0SNKOGFldLAhIxMRWF4mrvJth6zAQt7rN8Lj8Kw
+f9QPgW+gpQjWR5NRYpmbQFLYWwAHjtGzYwKsYLcRWBgNbw2IJezAnY8m5+YCSAfsrEwSuB7qxpqn
+4r3S7xbmuoqQyCib5w5qVtNIeDZlo7mAJWz7VGXBc3Ee9A+D8HD4aDDshcGL8ZsACgYI2UeamNss
+V105aZPbIHm+00t138mghu8SkmeDlj2rd8X9Q+R1nDhatfBa9W3+Hbpuc/4O3bDZN323W3BqbrfV
+W7vO27qhRN2N0QqvKPVgDthedwK3yeqwvXizt3ho/49e9q/1YufbWbw++AXy/d+XwgMAAA==]]></bytes></resource>
+	<resource id='54' name='postjson' module='com.inductiveautomation.webdev' modver='' type='webdev-resource' ver='0' dirty='false' editcount='9' parent='ebc4e4d9-2545-4732-adc3-30894c7bb9e6' oemlocked='false' scope='1' protected='false'>
+		<doc></doc>
+		<bytes><![CDATA[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
+3D6cw/ggONxJckiswX8BtNbm0TkVAAA=]]></bytes></resource>
+	<resource id='55' name='NewScript' module='' modver='' type='sr.script.project' ver='0' dirty='false' editcount='1' parent='2cda0027-8033-4beb-ad02-0ef378c659be' oemlocked='false' scope='7' protected='false'>
+		<doc></doc>
+		<bytes><![CDATA[H4sIAAAAAAAAAJuh2b/K+buX/6beUzYe09afZGBgYGJgYMxUDnscyoAdcAIxOwMDc3FJEUS1oLme
+pZ6hgZ6RgaGFoaGRhZEhUJwRKJ5WlJibWp5flK1XllpUnJmfBzGAPT8pKzW5pBjIZGZg4EkryM1E
+UsDGwCDjm5+n4JaapGBkqmBoaGVqYWVooOAZHKIAtMESqISDgcE8OT+vJDWvxLa6livE0d3FCcQo
+SUzPySwGi6Wkpink5RdoaFpxcRYkFhdzcRallpQWgSxgARpgCXGxAZDLCvRRSWZuanFJYm6BBAPE
+UQyMHBC/MTBzQLQwsHJAHMfAqAAJALAoBwA6dJdYQQEAAA==]]></bytes></resource>
+	<resource id='42' name='' module='' modver='' type='sr.global.props' ver='0' dirty='false' editcount='0' parent='' oemlocked='false' scope='7' protected='false'>
+		<doc></doc>
+		<bytes><![CDATA[H4sIAAAAAAAAAJuh2b/K+buX/6beUzYe09afZGBgYGJgYMz4mKnVwIAdcAMxBwMDc3FJEZDFycDA
+npKalliaUwLksQD1JgNpdiBdDFHOnp+UlZpcAuIxMzBYJ+fn6mXmpZQml2SWpSaWluTnJpZk5ufp
+ZabnZYIZQAW5QKqgKB+kTc89Jz8pMSegKL8AZAIXA4NscWqJC8TC4ECfkMT0YqBkWWZKapFfYm4q
+xP3MyTkg1WwMDEJA1Y6lJRlANWmZOalQJaxA5+UCaUYgyheA+otRAkQwgkzghDiWgUkKooiBhQmk
+iwNiJgM7FyMkDBgYVaAMBojnGTgxdXCh6gAxGACiFoYsdwEAAA==]]></bytes></resource>
+</resources>
+<deletedResources>
+</deletedResources>
+</project>
