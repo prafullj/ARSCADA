@@ -22,8 +22,8 @@ Installation manual for AR-SCADA
 
 10·In latest version of HTML5 browser (preferably chrome, as AR-SCADA was developed and tested on chrome)  open link
 http://\<hostname\>:8088/main/system/webdev/\<ars\>/ARS/systemlist.html· Where replace \<hostname\> and \<ars\> as follows:
-  Replace \<hostname\> with your ignition’s host name (to get host name open command prompt on the Ignition server and type hostname on the command prompt and press enter, it will display the hostname, copy and paste it where ever required.
-  Replace \<ars\> in the url in step 10 with name of your project (case sensitive).
+  Replace \<hostname\> (without \< and \>) with your ignition’s host name (to get host name open command prompt on the Ignition server and type hostname on the command prompt and press enter, it will display the hostname, copy and paste it where ever required.
+  Replace \<ars\> (without \< and \>) with name of your project (case sensitive). default project name is ars.
   
 For example http://pramanj:8088/main/system/webdev/new/ARS/systemlist.html
 The demo should word now. It will stop updating values after 60 seconds then you can refresh or change page to continue.
