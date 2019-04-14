@@ -20,10 +20,10 @@ Installation manual for AR-SCADA
 
 9. Download the webdev module corrosponding to the Ignition version that you have from archive https://inductiveautomation.com/downloads/archive Inductive Automation Modules > scroll down to device connectivity modules > scrol down to last and click webdev module.
 
-9·In latest version of HTML5 browser (preferably chrome, as AR-SCADA was developed and tested on chrome)  open link
+10·In latest version of HTML5 browser (preferably chrome, as AR-SCADA was developed and tested on chrome)  open link
 http://\<hostname\>:8088/main/system/webdev/new/ARS/systemlist.html
   
-10·replace \<hostname\> with your ignition’s host name (to get host name open command prompt on the Ignition server and type hostname on the command prompt and press enter, it will display the hostname, copy and paste it where ever required.
+11·Replace \<hostname\> with your ignition’s host name (to get host name open command prompt on the Ignition server and type hostname on the command prompt and press enter, it will display the hostname, copy and paste it where ever required.
   
 For example http://pramanj:8088/main/system/webdev/new/ARS/systemlist.html
 The demo should word now. It will stop updating values after 60 seconds then you can refresh or change page to continue.
