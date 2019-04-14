@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+<version>
+  <major>7</major>
+  <minor>8</minor>
+  <rev>1</rev>
+  <build>2016012216</build>
+</version>
+<timestamp>2019-04-14 17:09:07</timestamp>
+<id>1</id>
+<name>ars</name>
+<source></source>
+<title></title>
+<description></description>
+<enabled>true</enabled>
+<lastModified>1555241855045</lastModified>
+<lastModifiedBy>admin</lastModifiedBy>
+<editCount>5</editCount>
+<uuid>f5ea8ae3-a1b6-5a25-b185-f93a0290ca1a</uuid>
+<resources>
+	<resource id='17' name='InitPostJsonScript' module='' modver='' type='sr.script.project' ver='0' dirty='true' editcount='4' parent='2cda0027-8033-4beb-ad02-0ef378c659be' oemlocked='false' scope='7' protected='false'>
+		<doc></doc>
+		<bytes><![CDATA[H4sIAAAAAAAAAJuh2b/K+buX/6beUzYe09afZGBgYGJgYMz807f9AgN2wAnE7AwMzMUlRUAWC5Bj
+oWehZ6hnAOSxMTDI+ObnKTgWFCkYWCgYmlkBkYmpgmdwiIKRgaElUAkjA4NgWlFibmp5flG2Xllq
+UXFmfh7EWgFzsEFAhWYGhkZGhmYQC9nzk7JSk0uKgUxmBgaetILcTCR9HAwM5sn5eSWpeSW21bVc
+IY7uLk4gRkliek5mMVgsJTVNIS+/QEPTiouzILG4mIuzKLWktAikmxXon5LM3NTiksTcAgkGiBUM
+jBwQBzEwc0C8yMDKAfEdA6MCxPtgUQ4ADDamjz8BAAA=]]></bytes></resource>
+	<resource id='18' name='ARS' module='com.inductiveautomation.webdev' modver='' type='webdev-resource' ver='0' dirty='true' editcount='4' parent='ebc4e4d9-2545-4732-adc3-30894c7bb9e6' oemlocked='false' scope='1' protected='false'>
+		<doc></doc>
+		<bytes><![CDATA[H4sIAAAAAAAAAL1SzW7TQBAeJ6Rx2/Sf0jTl4CuHrOIIQqgqoZJLQaqKCEcui7NOt9hea70O6kMA
+N8QzcEHiwjPA63DgwoFvvUGkojckLNszO/PNzDcz++HOu4+jH0/OPr/5dnTy/tNXIqoRefLn2y/f
+6frnNr49p94gag7ZkIWsh9My0cNIpUxmkzIyciZ4aVTKjVQZk9NMVgoAaSWyWE7ZI17I6KlWudDm
+ciyMK795v8rZ74WDXtjvhwNXraleXojIFFDrRK04TyWbCV0gLUwHYJWqMjNi0o1VMhG6q0WhSh0J
+eNeIti74jLPSyISd8OL8lOewt4mWRocvjp+NcdhE4ry0JLYwgzPIFiL/hLmQbaKjf2kTKW4RNaKE
+F7aVBgZnZCoKw1Obfh2lI0gfZKLEIjZgSW3/kApyB57CaGhL2MapyoLjXAe9YRAODvHevRc8Hj8P
+ML0HgKwiyCbZhTofS87NOSwd7C8rkwSqh45jzVPxWulXCzNdASQyypa6CR7VJBKeTdloTn4fmJhb
+yGVXTtrkVkOe7xZJdd/dEmr4ji55FtT0bIPL7s6Q13HN0Yo1r1b/1t/QNZvzN3TdZt/w3dIQU3NL
+q77a1bjta0rU3RhtV1VIPZgbLNfdwK2oOuwsevYWD+3/wWX/Chc7386i++AXZaH1OMADAAA=]]></bytes></resource>
+	<resource id='19' name='postjson' module='com.inductiveautomation.webdev' modver='' type='webdev-resource' ver='0' dirty='true' editcount='4' parent='ebc4e4d9-2545-4732-adc3-30894c7bb9e6' oemlocked='false' scope='1' protected='false'>
+		<doc></doc>
+		<bytes><![CDATA[H4sIAAAAAAAAAL1Y6W7bRhBe52gs506a5k42dAJalUyLSuzYrJlCcew4gXMgdg9AEAKKXNlMKZIl
+l46FwHmDtv+KPkP/FOifPkP7Fn2K/imKzuySMmXLR9LUgi3uzn4z883MHlz9VPzh55m/Hj/79bs/
+pud//OV3QsgBQgbcv7//7R/S/3MT/s/L5iFCjkxqk5quVaBXIORzO2hrru8kNndXmZXwoG1xN/A1
+d9l3RQMAbfHwW+6ydt+KXft5FIQs4p1FxsHKRXB/H56UkKlCxHgS+fSNusLbnmpQdRob96abgdO5
+N888L6BfBZHnTI8JyfSYGFbXZRin7gpu1Yo+UdGrVX0CxAo58Wdh+H3tDhUci1vUpBH7NmExr6th
+EPMHIFMbQwXfarMYBhFTV0UPxauWl+TksosDrSCC9HDmLPLI9ZcBoShDhZhFqx7jL1gcBn7M8s42
+DaGNTSLNcpx5ZjksGlFrts3ieHQm8HkUeKM1iOr16LPIXXZ9tUzVT9WioEBd6vo0svxlNuIxf0Tw
+LhaNocIWgiVgeCs26K24TBV6S0LrbqNMZVDQBJvDIYA53aQ8VHBbVCpUGqap4ESwfEeh8JWpVxr1
+inEXRx/OLi3VHi4qggVqQRo2QJMGRJ75ybDUtjyPOZDBgtsOg4hTK+bQCaPgFbO59ghm4HOo1uM4
+8BftyA255gfhSFFakpjnSfNp0tw6KuJBGmi8ReNOzFlba7keE1+za27M4xGBEInbySlMfc58Xhfo
+hpm3FUHl5qBRi2XOUotoMAs21TaVUubiKXvd1zJoMS9mKR2hjGmae7QwS/0A65NA+ktZWO9AWXmz
+ruycWHD04H4Kh8pBITTP5SyyvJcMyjiyZ18i/69gVPMCy4lHdgu6p5obIG4te1Ais45Z2eh8lptF
+gjKkVThzknbYz1k+rqJcIBTM4QLaYzaMfDFBtdcjCES1U4qaFYbMd1As9xO1kZuQShaIUop5NJL2
+ijtXJkVlpUy7/bPmgnp+BSiLM7WndGPm7Vo9UO3utBilauxZdR3dblJOEWKIu22zAvVj3h63lTs4
+igFss6eM5/eUbWcQQqSODtrp2oUxsXRhh+0zZ3J16S5i2KlwP02VcDHtyeiu9cw7+bK28MXsYjo5
+UvM43kxaLRaZeNQUhh2um9tShrRkGOWx5dOqTuEsnUoVq6ai60Z1yqjoKIHDjXXJYwf2z9di9jhW
+x0QOKMwRBDEOgnFo1e8Yut4oYat6x6hONsRQVQyhF8lkLnLpHGvSChCpAsq4fZc+WlwSrNLVuNZ7
+mO1xVcrjbriPgax6cluHVxu2ZlawCZNRNlCp8w47QH2tUVdB2xEvRPAiILeErhmJ3QKiiILDZ68h
+CQu8E8KeYZpqSy2mFobBxIaLHoAYRxcd6RsHlHv5paSDkiaa9B5twZbMEeu5bTVNYSHNjEhU2k/r
+3TVazlT6+pvext/0B/L3vhl0swRtk0D33RMILPcxff+HN3Mbb6a5J3fvW4t4l1rE29ViB75drh+W
+anMXqs1dqHZziBzVpShhat8QirB99GLnLHj7k2B83dui8L7rB5ElU8eOPEpKZu6E2bBfUsry7AEr
+0Hkrjo1221RrCws3LKft+uUXX5crZbUEZ0BJhRZNP0JURdFbtSR9wK0CTyB9Suz1gK3oxviEUZko
+6+PGOLRv0633FVN9owguiqGopV6/es5vZXu/JVVZV5F4nnHuLMxYl7OjEHQTuJONWbY9FvhwyrMy
+nntlu2N77CW8tbAxz7UZXNXGRCdMmn7SzB3b3RhoLIKAN/TNF6nNL1Wbr1rr8nZ+JGjifI2heZCQ
+Y62w7WqrLIrhQAHRcUJOv7JWLS3hrqfNW/HKEysE+SlAhwnexE/DTfwZPI8BeAMpUdcIORl2+Erg
+j0YsDpLIZiA9Q8j0f/kFAEx8Qshh27NiZH2YkAImKeZWG52eAEI2PM8BIbwTuxFzXgQeQ+xlQoYw
+8YsZl0ug38IlAO1BiMn2EHYSTLTheYOQj5wAVzEmCoQBPM8CDJIOrY8IufIk8GktjGhlkuoTBvzd
+Ge++bADkKCihxauEHPITz4PmAOSsFcEe8DqIvsml+gLkMOU7z3mIWsNgIBXVEr4CkiGwY/MAvX8M
+PEXCPXgN0WbSbFwBTMtCSGfUdUBwHSJ0goeMXyCyxGRgUP7wQQ4Oyl9nyOFBGQ0ZQNCRAUxGQf5W
+QwYuydjJEIqPiu9jW6HHsZdBT6D1k4NynoDOATlPxP+BXr0zfVwclFnGCIXKQZoKkOs5KusvOmdv
+piPp70zkPFog+8HjQp7HxcwrubQfvi/35ECEvG9xX+nxjV6v5oev7QeH6ztzoPvB4cbOHJT94DCc
+55Cbg/8Cks7DkrAVAAA=]]></bytes></resource>
+	<resource id='14' name='' module='' modver='' type='sr.global.props' ver='0' dirty='true' editcount='0' parent='' oemlocked='false' scope='7' protected='false'>
+		<doc></doc>
+		<bytes><![CDATA[H4sIAAAAAAAAAG1QQU7DMBAcJy1p0gvihJB648IlH4ALKhIVQlAEH3AdNxjZcZU47SsQN8QbuCDx
+i/KhcuiBdZ0LAsv2zGpn1rt+O3l5H2+ubj+fv84mrx9rABHA1Hb1XeL/NaQzAOLG1cRSICnknLfa
+UdQjryBMCJsgT+zsSQrnoxg4Fdbkqipa4dRS8tZZw52yVa7KSu0ICQzBorbell9qO+N6WtuFr5AB
+o0a6i/Dg/d31Ay8bSi5VIesbbmToPxbaq/eAA1Kft+6RNHOlZSfpU3uGkNG2+91c7NBfzFdIQ7OI
+joIIvci7BqEmkoyFPwA77gjC8Ej/OrLfDk/wA0IiqIJ3AQAA]]></bytes></resource>
+</resources>
+<deletedResources>
+</deletedResources>
+</project>
