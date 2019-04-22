@@ -18,7 +18,7 @@ Installation manual for AR-SCADA
 
 8·Ensure your ignition is running on the server (in case it’s a trial version ensure to start trial period)?
 
-9. Download the webdev module corrosponding to the Ignition version that you have from archive https://inductiveautomation.com/downloads/archive Inductive Automation Modules > scroll down to device connectivity modules > scrol down to last and click webdev module. Install it on Ignition thru configure>modules menu from the Ignition home page.
+9. Download the webdev module corrosponding to the Ignition version that you have from archive https://inductiveautomation.com/downloads/archive Inductive Automation Modules > scroll down to device connectivity modules > scrol down to last and click webdev module. For Ignition version 8, the webdev is kept at  https://inductiveautomation.com/downloads/ignition . Install it on Ignition thru configure>modules menu from the Ignition home page.
 
 10·In latest version of HTML5 browser (preferably chrome, as AR-SCADA was developed and tested on chrome)  open link
 http://\<hostname\>:8088/main/system/webdev/\<ars\>/ARS/systemlist.html· Where replace \<hostname\> and \<ars\> as follows:
