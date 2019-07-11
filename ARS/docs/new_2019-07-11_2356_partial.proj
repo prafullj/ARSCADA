@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+<version>
+  <major>7</major>
+  <minor>9</minor>
+  <rev>10</rev>
+  <build>2018112821</build>
+</version>
+<timestamp>2019-07-11 23:56:34</timestamp>
+<id>6</id>
+<name>new</name>
+<source></source>
+<title></title>
+<description></description>
+<enabled>true</enabled>
+<lastModified>1562869517291</lastModified>
+<lastModifiedBy>admin</lastModifiedBy>
+<editCount>25</editCount>
+<uuid>e5d35a0a-56cc-9ab4-94bd-6e500a6a5c2b</uuid>
+<resources>
+	<resource id='53' name='ARS' module='com.inductiveautomation.webdev' modver='' type='webdev-resource' ver='0' dirty='true' editcount='6' parent='ebc4e4d9-2545-4732-adc3-30894c7bb9e6' oemlocked='false' scope='1' protected='false'>
+		<doc></doc>
+		<bytes><![CDATA[H4sIAAAAAAAAAL1SwW7TQBAdJ6R127QlLW3TFCEjceGQVRxU0USVEERCBakqIhy5bJ11usX2Wut1
+UD8CcUN8Axck/gJ+iCtvvUGkojckLNkz+3bezLwZf3748cvo58uzbx9+HJ98+vqdiGpEnnxwf/ce
+3fzcxbvn3BWiJ5FKmcwmZWTkTPDSqJQbqTImp5msHASklcliOWXPeCGjV1rlQpursTAu0bI6vxSR
+KeDWiZpxnko2E7oAH9ABCqaqzIyYdGOVTITualGoUkcCt+tErUs+46w0MmEnvLg45TnwNtHSaPj2
+6esxDreROC9ttRbkncE2wfxDc5QtouN/0YMUu0SNKOGFldLAhIxMRWF4mrvJth6zAQt7rN8Lj8Kw
+f9QPgW+gpQjWR5NRYpmbQFLYWwAHjtGzYwKsYLcRWBgNbw2IJezAnY8m5+YCSAfsrEwSuB7qxpqn
+4r3S7xbmuoqQyCib5w5qVtNIeDZlo7mAJWz7VGXBc3Ee9A+D8HD4aDDshcGL8ZsACgYI2UeamNss
+V105aZPbIHm+00t138mghu8SkmeDlj2rd8X9Q+R1nDhatfBa9W3+Hbpuc/4O3bDZN323W3BqbrfV
+W7vO27qhRN2N0QqvKPVgDthedwK3yeqwvXizt3ho/49e9q/1YufbWbw++AXy/d+XwgMAAA==]]></bytes></resource>
+	<resource id='54' name='postjson' module='com.inductiveautomation.webdev' modver='' type='webdev-resource' ver='0' dirty='true' editcount='18' parent='ebc4e4d9-2545-4732-adc3-30894c7bb9e6' oemlocked='false' scope='1' protected='false'>
+		<doc></doc>
+		<bytes><![CDATA[H4sIAAAAAAAAAL1Y3XLbxhVe2XEjMk4cJ03iJE6yBq2ALCmIoK3YQgRnaFuy5Li2R1SbznA0GRBY
+SnDwV2AhieNR3qCTu0yeoTed6Vu0j9GbPkLukpyzC1CgSP0mkWZE7J79zjnfnnOwP/ih9t0/H/z4
++Nm///HfxZXv//UfQsgFQqa++d/K/38ik/9U+H9PNkuEfGGHvuYGTmpzd5tZKQ99i7thoLmbgSsa
+APDFI+i7m9p9K3Ht53EYsZgPOoyDlevg8D48Z8hVvVSJGU/jgL5Ut7jvqQZVF7Fxb7EXOoN7K8zz
+QvpVGHvO4pyQLM6JYXWvXHIsblGTxuzvKUt4V43ChD8EmbpRLgWWzxIYRExXFT0Ub1teWpDLLg70
+wxjmwZnT4bEbbAJCUcqlhMXbHuNrLInCIGFFZweG0MYBkWY5zgqzHBZX1bZtsySZfRAGPA692TbM
+amf2WexuuoHaoOqf1JqgQF3qBjS2gk1W9VhQFbxrNaNcGiNYB4YziUFnkgZV6IyEdt2NBpWTgibY
+jADL6QHdcsntU4lvbpimggmzAkeh8JNrNze6TeMOjj5aWl9vP+ooggRqQRT2QXcNmHipIv3kWGpb
+nsccCGDJ9aMw5tRKOHSiOHzBbK6tQqU8h2Q9TsKgY8duxLUgjKo1aUlinqe9p2lvfFTMB2mg8X41
+CDmtSloQuSMcQDlyFnAZTAxAMkg487W+6zHxs7TrJjyRtiToKL6Zua6Ab5hFYzHkfBka7USGOzOZ
+WRRxesp2KLc2EZ5XlFIXsIqSWTaVeu4e0BO9okXmJcwomsb4L68+WaIYmX6YQl7rebxOMyPl5R7m
+7ygNcPXwfoaHooAca57LWWx5XzOokOqJnYnYVF7AsOaFlpNUj5u5VBhHQUw9yKLZFbHZ732e4fMI
+PbwP4RX+nNSPJvkrzk14w7cTDB5TZUU1mZbcK+iO+gSBrImMpmZFEQsclMsFSx1OMzcgZqPUEx5X
+s17tmBRlsDypWbc8MXguqBffMqXzoP2U7pfhsWkE1eFijhNVjROr7qHbA8oZQgxx1zebkEXmnXDp
+uo2jOIFD1q354rp1aCEhROrooJ295DAm3nFYxCcUTiExeRxxNcQlO1PC16pymqVrNIlyBascDDVV
+X+7hplg6Ed/jvRT4/7X95C9LnazwMvM43kv7fRabipiQw3Xz0GhAxHOM8tgKaEunraa+kCm2TEXX
+jdaC0dRRAlszG5LHDiz/O6IwHWtgIgcUFgiCGAfBOLS6tw1d36hjq3XbaN3dEEMtMYReJJPl2KXL
+rEebQKQFKOPWHbraWRes5GZLd0e34hO+9Fl2JhjICyPbgAKH7ZpNbEKdywYqDU6xwHR3N7oqaDvi
+3AXHGGG5MjQjsWMgKlYdKMDTuOGDCBYk01T7ai2zgDW872IEIMbRxUD6xgHlXvEt1UFJE016j/Zh
+1eeI9VxfzUJYyiIjApX1s3wPjTZylYn+Fg/xt/gb+TtrBN08QIcE0D19AIHlOYbv9/BmHuLNNE/k
+7qy5SI7JRXJYLo7gO+T621LtHUO1dwzVYQyRo7oep0ydOIUaLB+j2GULDpkSjHvWmMJZ3x9E1k0d
+O3IrqZuFHWbffl1pyL0HrEDnW7Ft+L6ptp88uWE5vhs01v7WaDbUOuwBdRVaNPsTohaKvlXr0ke5
+VMEdSF8Qaz1gm7ox/5nR/Kyhzxvz0L5Fx29bpvpSEVwUQ1Hro371gt/m4X7rqrKnIvEi48JemLNu
+5Fsh6KZwo5yzbHsuDOAAwRq47zXsge2xr+FAxOY812Zw0ZwTnSjtBWmvsG0P50ATMQm4Bxy8B44d
+Ig4g9k564oKBr9ZW15eGN8XK0bfZyhnvs8Mb4NhMIotvJabU0sXhDvQSM1OWksrBtMqjy+9ENTtb
+Iq8GcgFR4US2E8NVCY5knUFgb8VhEKZwDRFYtJLUJiRHffalukcI+QMh19e3Uvo49agO1XPLmIfS
+3T/AAKRCyELprF9W5LeeV8MeLlIJNC8Scrkf+a62zeIEThEgep+QqVV4vk7I1RfWtqWl3PW0FSvZ
++rMVgfxN0IpS/NpzFZDP4HkZwPtIibpByJVowLfCYDZmSZjGNgPpW4Qs/pqvTGDiXUIu2Z6VIPtL
+hJTwDUm45Ufye9fVO9qCpjc1iNZdXW/dbekgfwOI2vB8B4jipdyNmbMWegxtfExIGd/GTs7xI7Db
+x3UR2tMwV9tD2BUw4cPzJiTJCXFph84rgFiQ/prQ/QDQUBgYYUCH8LwG4fKt3TXG40Eb6syPRNTf
+BiC8udB6DYAooWAsSD0PmlMwiX4MhbcTxt8U8vIhBDojv8J5hFqfgoFM1E75FkjKYMfmIZr+I5AW
+WfGg9rUHWcg+AUzfQshg1nVAoMB0nfAR49eIrAcyNS1DSS5OyzmSS9OyNskUgl6dwsiU5EdDMvWB
+nC8po/g18Xt5HPo6NnLoG2j9yrQsJtC5IItJ/F8Y1XtrgouLMoQ4Q6FykWYC5PoOlUUiOm/fzEZI
+JngPLZDz4HGtyON9mnm99HOO2++dB5sPi2yuYww+Ej/n4fvjkYyIBJxbFj4Z8Y1eaXH4xnlwUI7m
+UDkPDjeP5jBzHhw+LXIo1OAv4f9KE7kYAAA=]]></bytes></resource>
+	<resource id='55' name='InitPostJsonScript' module='' modver='' type='sr.script.project' ver='0' dirty='true' editcount='14' parent='2cda0027-8033-4beb-ad02-0ef378c659be' oemlocked='false' scope='7' protected='false'>
+		<doc></doc>
+		<bytes><![CDATA[H4sIAAAAAAAAAJuh2b/K+buX/6beUzYe09afZGBgYGJgYMx+JP/QkgE74ARidgYG5uKSIohqQXM9
+Sz1DAz0jA0MLQ0MjCyNDoDgbA4NMSEapgldpjoKhoYKRsZWhoZWBhYJncIgCUCHIcEag1rSixNzU
+8vyibL2y1KLizPw8iB3s+UlZqcklxUAmMwMDT1pBbiaSAg4GBvPk/LyS1LwS2+parhBHdxcnEKMk
+MT0nsxgslpKappCXX6ChacXFWZBYXMzFWZRaUloE0s0CNMAS4mIDIJcV6KOSzNzU4pLE3AIJBoiN
+DIwcEL8xMHNAtDCwckB8xcCoAAkAsCgHAOfj2IBBAQAA]]></bytes></resource>
+</resources>
+<deletedResources>
+</deletedResources>
+</project>
