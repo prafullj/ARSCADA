@@ -28,9 +28,11 @@ http://\<hostname\>:8088/main/system/webdev/\<ars\>/ARS/systemlist.html· Where 
 For example http://pramanj:8088/main/system/webdev/ars/ARS/systemlist.html
 The demo should word now. It will stop updating values after 60 seconds then you can refresh or change page to continue.
 
-=================== INSTRUCTIONS FOR RUNNING RWS (REMOTE WEB SERVICES) MODULE =================================
+============= INSTRUCTIONS FOR RUNNING RWS (REMOTE WEB SERVICES) MODULE ====================
 
 11. The RWS module is an extension of ARSCADA module that allows you to communicate with Ignion and your HTML page using restful web service calls to read and write to Ignition tags. This allows you to have your own HTML page to dislay tags in a varity of formats using many open source libraries such as jquery, chart.js, and many more.
+
+12 The RWS module files are stored in C:/ARS/RWS folder in the ARSCADA_master.zip file when you download it. This folder contains two html files rws.html and rws1.html showing basic usage of RWS and advanced usage for displays.
 
 12. With the running in evaluation mode or licensed mode, open a new tab or window in browser and enter URL http://pramanj:8088/main/system/webdev/ars/ARS/rws/rws.html for version 8 and http://pramanj:8088/main/system/webdev/new/ARS/rws/rws.html for version 7.9 of Ignition. This html page shows how to do a simple read/write operation using the RWS module. The html page rws1.html in the directory C:/ARS/RWS/rws1.html shows a sample use of open source libraries such as chart.js and jquery.
 
