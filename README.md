@@ -12,9 +12,9 @@ Installation manual for AR-SCADA
 
 5·Copy the ARS folder and paste it at C: and you should have the ARS demo version installed on C:\ARS directory.
 
-6·There are two sample projects kept under folder C:\ARS\DOCS named ars_2019-04-14_1708_partial.proj for Ignition 7.9.10 and ars_2019-04-14_1723.zip for Ignition version 8 respectively. If your Ignition version is one of these then import the respective project in Ignition using designer and you are ready to launch AR-SCADA client.
+6·There are two sample projects kept under folder C:\ARS\DOCS named new_2019-07-11_2356_partial.proj for Ignition 7.9.10 and ars_2019-07-11_2206.zip for Ignition version 8 respectively. If your Ignition version is one of these then import the respective project in Ignition using designer and you are ready to launch AR-SCADA client.
 
-7·Open the file C:\ARS\viewer\embedhost.js and change the hostname to your ignition server host name and project name to ars (or to your project name if it’s other than ars) and save the file.
+7·Open the file C:\ARS\viewer\embedhost.js and change the hostname to your ignition server host name and project name to "ars" for ignition 8 and "new" for version 7.9 and save the file.(If parameter cycle_time is defined , then ensure this is your cycle time of scanning data base.
 
 8·Ensure your ignition is running on the server (in case it’s a trial version ensure to start trial period)?
 
@@ -27,3 +27,7 @@ http://\<hostname\>:8088/main/system/webdev/\<ars\>/ARS/systemlist.html· Where 
   
 For example http://pramanj:8088/main/system/webdev/ars/ARS/systemlist.html
 The demo should word now. It will stop updating values after 60 seconds then you can refresh or change page to continue.
+=================== INSTRUCTIONS FOR RUNNING RWS (REMOTE WEB SERVICES) MODULE =================================
+11. The RWS module is an extension of ARSCADA module that allows you to communicate with Ignion and your HTML page using restful web service calls to read and write to Ignition tags. This allows you to have your own HTML page to dislay tags in a varity of formats using many open source libraries such as jquery, chart.js, and many more.
+12. With the running in evaluation mode or licensed mode, open a new tab or window in browser and enter URL http://pramanj:8088/main/system/webdev/ars/ARS/rws/rws.html for version 8 and http://pramanj:8088/main/system/webdev/new/ARS/rws/rws.html for version 7.9 of Ignition. This html page shows how to do a simple read/write operation using the RWS module. The html page rws1.html in the directory C:/ARS/RWS/rws1.html shows a sample use of open source libraries such as chart.js and jquery.
+With this RWS module you can define any number of HTML pages to display Ignition parameters and to give input commands using write option.
