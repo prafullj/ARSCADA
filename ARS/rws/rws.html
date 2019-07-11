@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="embedhost.js"></script>
+<script src="rws.js"></script>
+<button type="button" onclick='writetags("[default]Tag 0","55.0")'>Set Tag0 to 55</button>
+<button type="button" onclick='writetags("[default]Tag 1","65.0")'>Set Tag1 to 65</button>
+<button type="button" onclick="writetags('[default]Tag 0;[default]Tag 1','50.0;60.0')">Set Tag 0,1 to 50 and 60</button>
+<p id="demo"></p>
+<p id="demo1"></p>
+<script>
+"use strict";
+TAGSFILE="C:\\\\ARS\\\\tags.txt"
+var tablevars1="[default]Tag 0;[default]Tag 102;[default]Tag 2;[default]Tag 3;[default]Tag 0;[default]Tag 102;[default]Tag 2;[default]Tag 3";
+var tablevars=[];
+function main(){
+	tablevars=tablevars1.split(";");
+	var nrows=tablevars.length;
+	for (var i = 0; i < nrows; i++)
+	{
+		var index=searchTag(tablevars[i]);
+		if(index<0) {console.log("Tag not found ",i,tablevars[i]); continue;}
+		/*console.log(i,tablevars[i],"val=",dbobj.TAGDB[index].val,
+		"state=",dbobj.TAGDB[index].state,
+		"con=",dbobj.TAGDB[index].con,
+		"lim=",dbobj.TAGDB[index].lim,
+		"label=",dbobj.TAGDB[index].label,
+		"typ=",dbobj.TAGDB[index].type,
+		"def=",dbobj.TAGDB[index].def,
+		"units=",dbobj.TAGDB[index].unit,
+		"width=",dbobj.TAGDB[index].width,
+		"deci=",dbobj.TAGDB[index].deci)*/
+	};	
+	loop();
+	setInterval(loop , cycle_time*1000);
+}
+function loop(){
+	update();
+}
+
+function update(){
+	document.getElementById('demo').innerHTML = "Tag 0 value = "+dbobj.TAGDB[0].val;
+	document.getElementById('demo1').innerHTML = "Tag 0 value = "+dbobj.TAGDB[1].val;
+}
+</script>
+</body>
+</html>

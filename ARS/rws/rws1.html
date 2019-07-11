@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/roundSlider/1.3.2/roundslider.min.css" rel="stylesheet"/> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/roundSlider/1.3.2/roundslider.min.js"></script>
+<!--EXCEL component-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jexcel/2.1.0/js/jquery.jexcel.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jexcel/2.1.0/css/jquery.jexcel.css" type="text/css" />
+<style>
+.panel {
+    background-color:#eeeeee;
+    height:200px;
+    width:400px;
+    float:left;
+    margin: 10px;
+   border: 1px solid black;	      
+}
+.smallpanel {
+    background-color:#eeeeee;
+    height:140px;
+    width:200px;
+    float:left;
+    margin: 10px;
+   border: 1px solid black;	      
+}
+.largepanel {
+    background-color:#eeeeee;
+    height:200px;
+    width:400px;
+    float:left;
+    margin: 10px;
+   border: 1px solid black;	      
+}
+</style>
+</head>
+<body>
+<script src="embedhost.js"></script>
+<script src="rws.js"></script>
+<button type="button" onclick="writetags('[default]Tag 0;[default]Tag 1;[default]Tag 2;[default]Tag 3;[default]Tag 4','50.0;60.0;70.0;80.0;90.0')">Set value</button>
+<button type="button" onclick="writetags('[default]Tag 0;[default]Tag 1;[default]Tag 2;[default]Tag 3;[default]Tag 4','55.0;65.0;75;85.0;95.0')">Set value</button>
+<div  class="panel" id="slider1"></div>
+<div  class="panel" id="slider2"></div>
+<div  class="panel" id="slider3"></div>
+<!--div  class="panel" id="mytable"></div-->
+<div class="panel" id="myDynamicTable">
+<p id="p1"></p>
+<p id="p2"></p>
+<p id="p3"></p>
+<p id="p4"></p>
+<p id="p5"></p>
+</div>
+<div  class="panel"><canvas id="myChart"></canvas></div>
+<div  class="panel"><canvas id="myChart1"></canvas></div>
+<div  class="panel"><canvas id="myChart2"></canvas></div>
+<div  class="panel"><canvas id="myChart3"></canvas></div>
+<div  class="panel"><canvas id="myChart4"></canvas></div>
+<div  class="panel"><canvas id="myChart5"></canvas></div>
+<div  class="panel"><canvas id="myChart6"></canvas></div>
+<div  class="panel"><canvas id="myChart7"></canvas></div>
+
+<script>
+"use strict";
+TAGSFILE="C:\\\\ARS\\\\tags.txt"
+var tablevars1="[default]Tag 0;[default]Tag 1;[default]Tag 2;[default]Tag 3;[default]Tag 4;[default]Tag 5;[default]Tag 6;[default]Tag 7";
+var tablevars=[];
+function main(){
+	tablevars=tablevars1.split(";");
+	var nrows=tablevars.length;
+	for (var i = 0; i < nrows; i++)
+	{
+		var index=searchTag(tablevars[i]);
+		if(index<0) {console.log("Tag not found ",i,tablevars[i]); continue;}
+		/*console.log(i,tablevars[i],"val=",dbobj.TAGDB[index].val,
+		"state=",dbobj.TAGDB[index].state,
+		"con=",dbobj.TAGDB[index].con,
+		"lim=",dbobj.TAGDB[index].lim,
+		"label=",dbobj.TAGDB[index].label,
+		"typ=",dbobj.TAGDB[index].type,
+		"def=",dbobj.TAGDB[index].def,
+		"units=",dbobj.TAGDB[index].unit,
+		"width=",dbobj.TAGDB[index].width,
+		"deci=",dbobj.TAGDB[index].deci)*/
+	};
+	$("#slider1").roundSlider();
+	$("#slider2").roundSlider({
+		radius: 85,
+		sliderType: "min-range",
+		value: 40
+	});
+	$("#slider3").roundSlider({
+		radius: 85,
+		sliderType: "range",
+		value: "10,40"
+	});	
+	updatetable();
+	loop();
+	setInterval(loop , cycle_time*1000);
+}
+function loop(){
+	//drawtable();
+	updatetable();
+	drawchart();
+	drawline();
+	drawbubble();
+	drawdoughnut();
+	drawradar();
+	drawpolar();
+	drawscatter();
+	drawmixed();
+}
+
+function updatetable() {
+		document.getElementById("p1").innerHTML = "1 "+tablevars[0]+" "+dbobj.TAGDB[0].def+" "+dbobj.TAGDB[0].val+" "+dbobj.TAGDB[0].unit;
+		document.getElementById("p2").innerHTML = "2 "+tablevars[1]+" "+dbobj.TAGDB[1].def+" "+dbobj.TAGDB[1].val+" "+dbobj.TAGDB[1].unit;
+		document.getElementById("p3").innerHTML = "3 "+tablevars[2]+" "+dbobj.TAGDB[2].def+" "+dbobj.TAGDB[2].val+" "+dbobj.TAGDB[2].unit;
+		document.getElementById("p4").innerHTML = "4 "+tablevars[3]+" "+dbobj.TAGDB[3].def+" "+dbobj.TAGDB[3].val+" "+dbobj.TAGDB[3].unit;
+		document.getElementById("p5").innerHTML = "5 "+tablevars[4]+" "+dbobj.TAGDB[4].def+" "+dbobj.TAGDB[4].val+" "+dbobj.TAGDB[4].unit;
+}
+
+function drawtable(){
+	var data = [
+		['Google', 1998, 807.80],
+		['Apple', 1976, 116.52],
+		['Yahoo', 1994, 38.66],
+	];
+
+	$('#mytable').jexcel({
+		data:data,
+		colWidths: [ 80, 80, 80 ]
+	});
+};
+
+function drawchart(){
+	var data1=[dbobj.TAGDB[0].val,dbobj.TAGDB[1].val,dbobj.TAGDB[2].val,dbobj.TAGDB[3].val,dbobj.TAGDB[4].val,dbobj.TAGDB[5].val];
+	//[12, 19, 3, 5, 2, 3];
+	var ctx = document.getElementById('myChart').getContext('2d');
+	var myChart = new Chart(ctx, {
+		type: 'bar',
+		data: {
+			labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+			datasets: [{
+				label: '# of Votes',
+				data: data1,
+				backgroundColor: [
+					'rgba(255, 99, 132, 0.2)',
+					'rgba(54, 162, 235, 0.2)',
+					'rgba(255, 206, 86, 0.2)',
+					'rgba(75, 192, 192, 0.2)',
+					'rgba(153, 102, 255, 0.2)',
+					'rgba(255, 159, 64, 0.2)'
+				],
+				borderColor: [
+					'rgba(255, 99, 132, 1)',
+					'rgba(54, 162, 235, 1)',
+					'rgba(255, 206, 86, 1)',
+					'rgba(75, 192, 192, 1)',
+					'rgba(153, 102, 255, 1)',
+					'rgba(255, 159, 64, 1)'
+				],
+				borderWidth: 1
+			}]
+		},
+		options: {
+			scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero: true
+					}
+				}]
+			}
+		}
+	});
+}
+function drawline(){
+	var data1=[dbobj.TAGDB[0].val,dbobj.TAGDB[1].val,dbobj.TAGDB[2].val,dbobj.TAGDB[3].val,dbobj.TAGDB[4].val,dbobj.TAGDB[5].val];
+	//[12, 19, 3, 5, 2, 3];
+	var ctx = document.getElementById('myChart1').getContext('2d');
+	var myChart = new Chart(ctx, {
+		"type": "line",
+		"data": {
+			"labels": [
+				"January",
+				"February",
+				"March",
+				"April",
+				"May",
+				"June",
+				"July"
+			],
+			"datasets": [{
+				"label": "My First Dataset",
+				"data": data1,//[65, 59, 80, 81, 56, 55, 40],
+				"fill": true,
+				"borderColor": "rgb(75, 192, 192)",
+				"lineTension": 0.1
+			}]
+		},
+		"options": {
+
+		}
+	});
+}
+
+function drawbubble(){
+//	var data1=[dbobj.TAGDB[0].val,dbobj.TAGDB[1].val,dbobj.TAGDB[2].val,dbobj.TAGDB[3].val,dbobj.TAGDB[4].val,dbobj.TAGDB[5].val];
+	//[12, 19, 3, 5, 2, 3];
+	var ctx = document.getElementById('myChart2');
+	var myChart = new Chart(ctx, {
+    "type": "bubble",
+    "data": {
+        "datasets": [{
+            "label": "First Dataset",
+            "data": [{
+                "x": 20,
+                "y": 30,
+                "r": 15
+            }, {
+                "x": 40,
+                "y": 10,
+                "r": 10
+            }],
+            "backgroundColor": "rgb(255, 99, 132)"
+        }]
+    }
+	});
+}
+function drawdoughnut(){
+	var data1=[dbobj.TAGDB[0].val,dbobj.TAGDB[1].val,dbobj.TAGDB[2].val,dbobj.TAGDB[3].val,dbobj.TAGDB[4].val,dbobj.TAGDB[5].val];
+	//[12, 19, 3, 5, 2, 3];
+	var ctx = document.getElementById('myChart3');
+	var myChart = new Chart(ctx, {
+    "type": "doughnut",
+    "data": {
+        "labels": [
+            "Red",
+            "Blue",
+            "Yellow",
+            "Green",
+            "Violet",
+            "Orange"
+        ],
+        "datasets": [{
+            "label": "My First Dataset",
+            "data": data1,//[300, 50, 100],
+            "backgroundColor": [
+                "rgb(255, 99, 132)",
+                "rgb(54, 162, 235)",
+                "rgb(255, 205, 86)",
+                "rgb(238,130,238)",
+                "rgb(255,165,0)"
+            ]
+        }]
+    }
+	});
+}
+
+function drawradar(){
+	var data1=[dbobj.TAGDB[0].val,dbobj.TAGDB[1].val,dbobj.TAGDB[2].val,dbobj.TAGDB[3].val,dbobj.TAGDB[4].val,dbobj.TAGDB[5].val,dbobj.TAGDB[6].val];
+	//[12, 19, 3, 5, 2, 3];
+	var ctx = document.getElementById('myChart4');
+	var myChart = new Chart(ctx, {
+    "type": "radar",
+    "data": {
+        "labels": [
+            "Eating",
+            "Drinking",
+            "Sleeping",
+            "Designing",
+            "Coding",
+            "Cycling",
+            "Running"
+        ],
+        "datasets": [{
+            "label": "My First Dataset",
+            "data": data1,//[65, 59, 90, 81, 56, 55, 40],
+            "fill": true,
+            "backgroundColor": "rgba(255, 99, 132, 0.2)",
+            "borderColor": "rgb(255, 99, 132)",
+            "pointBackgroundColor": "rgb(255, 99, 132)",
+            "pointBorderColor": "#fff",
+            "pointHoverBackgroundColor": "#fff",
+            "pointHoverBorderColor": "rgb(255, 99, 132)",
+            "fill": true
+        }, {
+            "label": "My Second Dataset",
+            "data": [28, 48, 40, 19, 96, 27, 100],
+            "fill": true,
+            "backgroundColor": "rgba(54, 162, 235, 0.2)",
+            "borderColor": "rgb(54, 162, 235)",
+            "pointBackgroundColor": "rgb(54, 162, 235)",
+            "pointBorderColor": "#fff",
+            "pointHoverBackgroundColor": "#fff",
+            "pointHoverBorderColor": "rgb(54, 162, 235)",
+            "fill": true
+        }]
+    },
+    "options": {
+        "elements": {
+            "line": {
+                "tension": 0,
+                "borderWidth": 3
+            }
+        }
+    }
+	});
+}
+
+function drawpolar(){
+	var data1=[dbobj.TAGDB[0].val,dbobj.TAGDB[1].val,dbobj.TAGDB[2].val,dbobj.TAGDB[3].val,dbobj.TAGDB[4].val,dbobj.TAGDB[5].val,dbobj.TAGDB[6].val];
+	//[12, 19, 3, 5, 2, 3];
+	var ctx = document.getElementById('myChart5');
+	var myChart = new Chart(ctx, {
+    "type": "polarArea",
+    "data": {
+        "labels": [
+            "Red",
+            "Green",
+            "Yellow",
+            "Grey",
+            "Blue"
+        ],
+        "datasets": [{
+            "label": "My First Dataset",
+            "data": data1,//[11, 16, 7, 3, 14],
+            "backgroundColor": [
+                "rgb(255, 99, 132)",
+                "rgb(75, 192, 192)",
+                "rgb(255, 205, 86)",
+                "rgb(201, 203, 207)",
+                "rgb(54, 162, 235)"
+            ]
+        }]
+    }
+	});
+}
+
+function drawscatter(){
+	var data1=[dbobj.TAGDB[0].val,dbobj.TAGDB[1].val,dbobj.TAGDB[2].val,dbobj.TAGDB[3].val,dbobj.TAGDB[4].val,dbobj.TAGDB[5].val,dbobj.TAGDB[6].val];
+	//[12, 19, 3, 5, 2, 3];
+	var ctx = document.getElementById('myChart6');
+	var myChart = new Chart(ctx, {
+    type: 'scatter',
+    data: {
+        datasets: [{
+            label: 'Scatter Dataset',
+            data: [{
+                x: data1[0],//-10,
+                y: data1[1]//0
+            }, {
+                x: data1[2],//0,
+                y: data1[3]//10
+            }, {
+                x: data1[4],//10,
+                y: data1[6]//5
+            }, {
+                x: -10,
+                y: 0
+            }, {
+                x: 0,
+                y: 10
+            }, {
+                x: 10,
+                y: 5
+            }]
+        }]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                type: 'linear',
+                position: 'bottom'
+            }]
+        }
+    }
+	});
+}
+function drawmixed(){
+	var data1=[dbobj.TAGDB[0].val,dbobj.TAGDB[1].val,dbobj.TAGDB[2].val,dbobj.TAGDB[3].val,dbobj.TAGDB[4].val,dbobj.TAGDB[5].val,dbobj.TAGDB[6].val];
+	//[12, 19, 3, 5, 2, 3];
+	var ctx = document.getElementById('myChart7');
+	var myChart = new Chart(ctx, {
+    "type": "bar",
+    "data": {
+        "labels": [
+            "January",
+            "February",
+            "March",
+            "April"
+        ],
+        "datasets": [{
+            "label": "Bar Dataset",
+            "data": data1,//[10, 20, 30, 40],
+            "borderColor": "rgb(255, 99, 132)",
+            "backgroundColor": "rgba(255, 99, 132, 0.2)"
+        }, {
+            "label": "Line Dataset",
+            "data": data1,//[50, 40, 30, 45],
+            "type": "line",
+            "fill": false,
+            "borderColor": "rgb(54, 162, 235)"
+        }]
+    },
+    "options": {
+        "scales": {
+            "yAxes": [{
+                "ticks": {
+                    "beginAtZero": true
+                }
+            }]
+        }
+    }
+}
+)}
+</script>
+</body>
+</html>
