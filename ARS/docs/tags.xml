@@ -1,0 +1,163 @@
+<Tags>
+   <Tag name="simvars_ai" path="" type="Folder"/>
+   <Tag name="ai1" path="simvars_ai" type="DB">
+      <Property name="Value">0.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="ai2" path="simvars_ai" type="DB">
+      <Property name="Value">0.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="ai3" path="simvars_ai" type="DB">
+      <Property name="Value">0.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="ai4" path="simvars_ai" type="DB">
+      <Property name="Value">0.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="ai5" path="simvars_ai" type="DB">
+      <Property name="Value">0.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="simvars_ao" path="" type="Folder"/>
+   <Tag name="ao1" path="simvars_ao" type="DB">
+      <Property name="Value">17.50007</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="ao2" path="simvars_ao" type="DB">
+      <Property name="Value">0.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="ao3" path="simvars_ao" type="DB">
+      <Property name="Value">2.6347609E-5</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="ao4" path="simvars_ao" type="DB">
+      <Property name="Value">93.255264</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="ao5" path="simvars_ao" type="DB">
+      <Property name="Value">0.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="simvars_di" path="" type="Folder"/>
+   <Tag name="di5" path="simvars_di" type="DB">
+      <Property name="Value">false</Property>
+      <Property name="DataType">6</Property>
+   </Tag>
+   <Tag name="MTR_START_PB" path="simvars_di" type="DB">
+      <Property name="Value">false</Property>
+      <Property name="DataType">6</Property>
+   </Tag>
+   <Tag name="MTR_STOP_PB" path="simvars_di" type="DB">
+      <Property name="Value">false</Property>
+      <Property name="DataType">6</Property>
+   </Tag>
+   <Tag name="VALVE_CLOSE_PB" path="simvars_di" type="DB">
+      <Property name="Value">false</Property>
+      <Property name="DataType">6</Property>
+   </Tag>
+   <Tag name="VALVE_OPEN_PB" path="simvars_di" type="DB">
+      <Property name="Value">false</Property>
+      <Property name="DataType">6</Property>
+   </Tag>
+   <Tag name="simvars_do" path="" type="Folder"/>
+   <Tag name="do1" path="simvars_do" type="DB">
+      <Property name="Value">false</Property>
+      <Property name="DataType">6</Property>
+   </Tag>
+   <Tag name="do2" path="simvars_do" type="DB">
+      <Property name="Value">false</Property>
+      <Property name="DataType">6</Property>
+   </Tag>
+   <Tag name="do3" path="simvars_do" type="DB">
+      <Property name="Value">false</Property>
+      <Property name="DataType">6</Property>
+   </Tag>
+   <Tag name="do4" path="simvars_do" type="DB">
+      <Property name="Value">false</Property>
+      <Property name="DataType">6</Property>
+   </Tag>
+   <Tag name="io1" path="simvars_do" type="DB">
+      <Property name="Value">2</Property>
+      <Property name="DataType">2</Property>
+   </Tag>
+   <Tag name="io2" path="simvars_do" type="DB">
+      <Property name="Value">0</Property>
+      <Property name="DataType">2</Property>
+   </Tag>
+   <Tag name="StartPubNub" path="" type="DB">
+      <Property name="Value">false</Property>
+      <Property name="DataType">6</Property>
+   </Tag>
+   <Tag name="StartTimer" path="" type="DB">
+      <Property name="Value">false</Property>
+      <Property name="DataType">6</Property>
+   </Tag>
+   <Tag name="Tag 0" path="" type="DB">
+      <Property name="Value">50.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="Tag 1" path="" type="DB">
+      <Property name="Value">60.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="Tag 2" path="" type="DB">
+      <Property name="Value">75.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="Tag 3" path="" type="DB">
+      <Property name="Value">25.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="Tag 4" path="" type="DB">
+      <Property name="Value">90.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="Tag 5" path="" type="DB">
+      <Property name="Value">55.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="Tag 6" path="" type="DB">
+      <Property name="Value">66.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="Tag 7" path="" type="DB">
+      <Property name="Value">60.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="Tag 8" path="" type="DB">
+      <Property name="Value">65.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="Tag 9" path="" type="DB">
+      <Property name="Value">56.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="Tag 10" path="" type="DB">
+      <Property name="Value">100.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="Tag 100" path="" type="DB">
+      <Property name="Value">0</Property>
+      <Property name="DataType">2</Property>
+   </Tag>
+   <Tag name="Tag 101" path="" type="DB">
+      <Property name="Value">0</Property>
+      <Property name="DataType">2</Property>
+   </Tag>
+   <Tag name="Tag 102" path="" type="DB">
+      <Property name="Value">true</Property>
+      <Property name="DataType">6</Property>
+   </Tag>
+   <Tag name="Tag 103" path="" type="DB">
+      <Property name="Value">1059.0</Property>
+      <Property name="DataType">4</Property>
+   </Tag>
+   <Tag name="Tag 104" path="" type="DB">
+      <Property name="Value">false</Property>
+      <Property name="DataType">6</Property>
+      <Property name="Documentation">Yet another boolean tag</Property>
+   </Tag>
+</Tags>
