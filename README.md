@@ -12,28 +12,26 @@ Installation manual for AR-SCADA
 
 5·Copy the ARS folder and paste it at C: and you should have the ARS demo version installed on C:\ARS directory.
 
-6·There are two sample projects kept under folder C:\ARS\DOCS named new_2019-07-11_2356_partial.proj for Ignition 7.9.10 and ars_2019-07-11_2206.zip for Ignition version 8 respectively. If your Ignition version is one of these then import the respective project in Ignition using designer and you are ready to launch AR-SCADA client.
+6·There are two sample project resource files kept under folder C:\ARS\DOCS named new_2019-07-11_2356_partial.proj for Ignition 7.9.10 and ars_2019-07-11_2206.zip for Ignition version 8 respectively. Open the Ignition designer of the version you have installed and create a new project called "ars" and import the project resource file C:\ARS\DOCS\new_2019-07-11_2356_partial.proj or C:\ARS\DOCS\ars_2019-07-11_2206.zip in to the newly created project. If you already have the "ars" created from the last trial, then overwrite the webDev resources it will ask for.
 
-7·Open the file C:\ARS\viewer\embedhost.js and change the hostname to your ignition server host name and project name to "ars" for ignition 8 and "new" for version 7.9 and save the file.(If parameter cycle_time is defined , then ensure this is your cycle time of scanning data base.
+7·Open the file C:\ARS\viewer\embedhost.js and change the hostname to your ignition server hostname and project name to "ars" for ignition 8 and save the file. Parameter cycle_time is defined for RWS module which denotes the cycle time (in seconds) of scanning data base for the RWS module.
 
 8·Ensure your ignition is running on the server (in case it’s a trial version ensure to start trial period)?
 
-9. Download the webdev module corrosponding to the Ignition version that you have from archive https://inductiveautomation.com/downloads/archive Inductive Automation Modules > scroll down to device connectivity modules > scrol down to last and click webdev module. For Ignition version 8, the webdev is kept at  https://inductiveautomation.com/downloads/ignition . Install it on Ignition thru configure>modules menu from the Ignition home page.
+9. Download the webDev module corrosponding to the Ignition version that you have from archive https://inductiveautomation.com/downloads/archive Inductive Automation Modules->scroll down to device connectivity modules->scroll down to last and click webdev module. For Ignition version 8, the webEev is kept at  https://inductiveautomation.com/downloads/ignition . Install it on Ignition thru configure->modules menu from the Ignition home page.
 
-10·In latest version of HTML5 browser (preferably chrome, as AR-SCADA was developed and tested on chrome)  open link
-http://\<hostname\>:8088/main/system/webdev/\<ars\>/ARS/systemlist.html· Where replace \<hostname\> and \<ars\> as follows:
-  Replace \<hostname\> (without \< and \>) with your ignition’s host name (to get host name open command prompt on the Ignition server and type hostname on the command prompt and press enter, it will display the hostname, copy and paste it where ever required.
-  Replace \<ars\> (without \< and \>) with name of your project (case sensitive). default project name is ars.
+10·Open a latest version of HTML5 browser (preferably chrome, as AR-SCADA was developed and tested on chrome)  open link
+http://\<hostname\>:8088/main/system/webdev/\<ars\>/ARS/systemlist.html· Where \<hostname\> is your Ignition hostname and \<ars\> is your project name.  Replace \<hostname\> (without \< and \>) with your ignition’s host name (to get host name open command prompt on the Ignition server and type hostname on the command prompt and press enter, it will display the hostname, copy and paste it where ever required.  Replace \<ars\> (without \< and \>) with name of your project (case sensitive). default project name is ars.
   
 For example http://pramanj:8088/main/system/webdev/ars/ARS/systemlist.html
-The demo should word now. It will stop updating values after 60 seconds then you can refresh or change page to continue.
+The demo should work now, start navigating the ARSCADA screens. The trial version will stop updating values after 60 seconds then you can refresh or change page to continue. Once you obtain a Licensed version, the update will continue without stopping.
 
 ============= INSTRUCTIONS FOR RUNNING RWS (REMOTE WEB SERVICES) MODULE ====================
 
-11. The RWS module is an extension of ARSCADA module that allows you to communicate with Ignion and your HTML page using restful web service calls to read and write to Ignition tags. This allows you to have your own HTML page to dislay tags in a varity of formats using many open source libraries such as jquery, chart.js, and many more.
+11. The RWS module is an extension of ARSCADA module that allows you to communicate with Ignion using restful web service calls in an HTML page to read and write to Ignition tags. This opens a lot of new possibilities for you to Interact with Ignition server through an HTML page using many open source libraries such as jquery, chart.js, and many more.
 
-12 The RWS module files are stored in C:/ARS/RWS folder in the ARSCADA_master.zip file when you download it. This folder contains two html files rws.html and rws1.html showing basic usage of RWS and advanced usage for displays.
+12 The RWS module files are stored in C:/ARS/RWS folder in the ARSCADA_master.zip file when you download it. This folder contains two sample html files rws.html and rws1.html showing basic usage of RWS and advanced usage for displays.
 
-12. With the running in evaluation mode or licensed mode, open a new tab or window in browser and enter URL http://pramanj:8088/main/system/webdev/ars/ARS/rws/rws.html for version 8 and http://pramanj:8088/main/system/webdev/new/ARS/rws/rws.html for version 7.9 of Ignition. This html page shows how to do a simple read/write operation using the RWS module. The html page rws1.html in the directory C:/ARS/RWS/rws1.html shows a sample use of open source libraries such as chart.js and jquery.
+12. Run the Ignition server in evaluation mode or licensed mode upto step 9 above. Open a new tab or window in client browser and enter URL http://pramanj:8088/main/system/webdev/ars/ARS/rws/rws1.html . This html page shows sample use of open source libraries such as chart.js and jquery. You can open the file C:/ARS/RWS/rws1.html in an editor to see the HTML and .js code. The url http://pramanj:8088/main/system/webdev/ars/ARS/rws/rws.html shows a simple read/write operation using the RWS module without thirdparty libraries. Inspect the code of rws.html to see how to read write tags from Ignition server.
 
-With this RWS module you can define any number of HTML pages to display Ignition parameters and to give input commands using write option.
+With the RWS module you can define any number of HTML pages to display Ignition parameters and to give input commands using write option.
