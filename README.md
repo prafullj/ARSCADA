@@ -12,7 +12,7 @@ Installation manual for AR-SCADA
 
 5·Copy the ARS folder and paste it at C: root folder and you should have the ARS demo version installed on C:\ARS directory.
 
-6. Download the webDev module corrosponding to the Ignition version that you have from the archive https://inductiveautomation.com/downloads/archive Inductive Automation Modules->scroll down to device connectivity modules->scroll down to last and click webDev module. For Ignition version 8, the webDev is kept at  https://inductiveautomation.com/downloads/ignition . Install it on Ignition thru configure->modules menu from the Ignition home page.
+6.Download the webDev module corrosponding to the Ignition version that you have from the archive https://inductiveautomation.com/downloads/archive Inductive Automation Modules->scroll down to device connectivity modules->scroll down to last and click webDev module. For Ignition version 8, the webDev is kept at  https://inductiveautomation.com/downloads/ignition . Install it on Ignition thru configure->modules menu from the Ignition home page.
 
 7·There are two sample project files kept under folder C:\ARS\DOCS named new_2019-07-11_2356_partial.proj for Ignition 7.9.10 and ars_2019-07-11_2206.zip for Ignition version 8 respectively. Open the Ignition designer of the version you have installed and create a new project called "ars" and import the project resource file C:\ARS\DOCS\new_2019-07-11_2356_partial.proj or C:\ARS\DOCS\ars_2019-07-11_2206.zip in to the newly created project. If you already have the "ars" created from the last trial, then open it and import these projects and choose overwrite option for the webDev resources it will ask for.
 
